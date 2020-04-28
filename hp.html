@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -7,39 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     <style type="text/css">
-        div.header {
-            background-image: url("img/top.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 900px;
-            width: auto;
-            padding: 0;
-            margin: 0;
+        /* li {
+            color: lightgray;
+            flood-color: #d3d3d3;
+            line-height: 80px;
+            list-style: none;
+            font-size: 2.5em;
+            font-weight: bold;
+            font-family: fantasy;
+            text-align: center;
         }
 
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            overflow-x: hidden;
+        a {
+            text-decoration: none;
         }
 
         #main {
-            background-color: #eee;
+            background-image: url("img\top.jpg");
+            border-color: #eee;
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0px;
             padding: 8px;
-            margin-left:0;
+            margin-left: 0;
             z-index: 1;
             overflow: auto;
             box-sizing: border-box;
         }
 
         #cover {
-            background-color: #000;
+            background-color: #ffffff;
             opacity: .6;
             width: 100%;
             height: 100%;
@@ -51,11 +51,11 @@
         }
 
         #menu {
-            background-color: #4c80ee;
+            background-color: #696969;
             color: #fff;
             position: absolute;
             top: 0;
-            right: -250px;
+            right: -300px;
             padding: 8px;
             width: 270px;
             min-height: 100%;
@@ -78,11 +78,19 @@
         #menu.menu-open {
             right: 0;
         }
+
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            overflow-x: hidden;
+        } */
     </style>
 </head>
 
 <body>
     <div id="menu">
+        <i class="fa fa-times" id="close"></i>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -93,41 +101,36 @@
         </ul>
     </div>
     <div id="main">
-        <!-- <i class="fa fa-bars" id="open"></i> -->
+        <i class="fa fa-bars" id="open"></i>
         <p>Born in 1997.8.12</p>
         <p>Living in Tokyo</p>
         <p>When I was a student, I was making games.</p>
         <p>Shooting Game , Action Game , Puzzle Game, Strategy Game</p>
     </div>
     <div id="cover"></div>
+    <!-- スクリプト -->
     <script>
         'use strict';
 
-        // const open = document.getElementById('open');
-        // const close = document.getElementById('close');
+        const open = document.getElementById('open');
+        const close = document.getElementById('close');
 
         const menu = document.getElementById('menu');
         const cover = document.getElementById('cover');
 
-        menu.addEventListener('mouseover', () => {
+
+        open.addEventListener('click', () => {
             menu.className = 'menu-open';
             cover.className = 'menu-open';
         });
-        menu.addEventListener('mouseleave', () => {
+        close.addEventListener('click', () => {
             menu.className = '';
             cover.className = '';
         });
 
-    // open.addEventListener('click', () => {
-    //     menu.className = 'menu-open';
-    //     cover.className = 'menu-open';
-    // });
-    // close.addEventListener('click', () => {
-    //     menu.className = '';
-    //     cover.className = '';
-    // });
-
     </script>
 </body>
+
+</html>
 
 </html>
