@@ -8,90 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/portfolio.css">
     <style type="text/css">
-        /* li {
-            color: lightgray;
-            flood-color: #d3d3d3;
-            line-height: 80px;
-            list-style: none;
-            font-size: 2.5em;
-            font-weight: bold;
-            font-family: fantasy;
-            text-align: center;
-        }
 
-        a {
-            text-decoration: none;
-        }
-
-        #main {
-            background-image: url("img\top.jpg");
-            border-color: #eee;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0px;
-            padding: 8px;
-            margin-left: 0;
-            z-index: 1;
-            overflow: auto;
-            box-sizing: border-box;
-        }
-
-        #cover {
-            background-color: #ffffff;
-            opacity: .6;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: none;
-            z-index: 2;
-        }
-
-        #menu {
-            background-color: #696969;
-            color: #fff;
-            position: absolute;
-            top: 0;
-            right: -300px;
-            padding: 8px;
-            width: 270px;
-            min-height: 100%;
-            margin: 0;
-            z-index: 3;
-            box-sizing: border-box;
-            transition: .4s;
-        }
-
-        #open,
-        #close {
-            float: right;
-            cursor: pointer;
-        }
-
-        #cover.menu-open {
-            display: block;
-        }
-
-        #menu.menu-open {
-            right: 0;
-        }
-
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            overflow-x: hidden;
-        } */
     </style>
 </head>
 
 <body>
+    <div class="wrapp">
+        <img src="img/bs.jpg" width="100%" height="760px">
+        <img src="img/top.jpg" width="100%" height="760px">
+        <img src="img/top.jpg" width="100%" height="600px">
+    </div>
     <div id="menu">
         <i class="fa fa-times" id="close"></i>
-        <ul>
+        <ul class="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Information</a></li>
@@ -99,14 +28,58 @@
             <li><a href="#">Protfolio</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <ul class="sns">
+            <li>
+                <a href="https://twitter.com/Tarako_0000"><img src="img/twitter.jpg" height="50px" width="100px"></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/take5569/?hl=ja"><img src="img/ig.jpg" height="50px" width="100px"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/shunn.take.50"><img src="img/fb.jpg" height="50px" width="100px"></a>
+            </li>
+            <li>
+                <a href="mailto:s.takemura555@gmail.com"><img src="img/mail.jpg" height="50px" width="100px"></a>
+            </li>
+        </ul>
     </div>
     <div id="main">
-        <i class="fa fa-bars" id="open"></i>
-        <p>Born in 1997.8.12</p>
-        <p>Living in Tokyo</p>
-        <p>When I was a student, I was making games.</p>
-        <p>Shooting Game , Action Game , Puzzle Game, Strategy Game</p>
+        <i class="fa fa-bars my-gray" id="open"></i>
+        <img id="profile" src="img/me.JPG">
+        <div class="text1">
+            <p>Born in 1997.8.12<br> Living in Tokyo<br> When I was a student, I was making games.<br> Shooting Game , Action Game , Puzzle Game, Strategy Game</p>
+        </div>
+
+        <div class="text2">
+            <p>竹村　俊一郎<br> <b>1997</b>年生まれ、日本工学院専門学校卒。
+                <br> ゲームクリエイター科
+                <br> 学生時代は、オールジャンルのゲームを制作し
+                <br> 今は、<b>IT</b>プログラマとしてキャリアをスタート！！
+                <br> 学生時代は、<b>C# ,C++ ,Unreal Engine ,Unity</b>
+                <br>を使用してゲームを制作していた。
+            </p>
+        </div>
+
+        <div class="event">
+            <p><a href="#">🌎</a> ｜ <a href="mailto:s.takemura555@gmail.com">📧</a></p>
+        </div>
+
+        <h1>P R O F I L E</h1>
+        <h2>最 新 ブ ロ ブ</h2>
+
+        <ul class="blog">
+            <li>
+                <a href="#"><img src="img/blog1.jpg" height="350px" width="600px"></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/blog2.jpg" height="350px" width="600px"></a>
+            </li>
+            <li>
+                <a href="#"><img src="img/blog3.jpg" height="350px" width="600px"></a>
+            </li>
+        </ul>
     </div>
+
     <div id="cover"></div>
     <!-- スクリプト -->
     <script>
@@ -121,13 +94,10 @@
 
         open.addEventListener('click', () => {
             menu.className = 'menu-open';
-            cover.className = 'menu-open';
         });
         close.addEventListener('click', () => {
-            menu.className = '';
-            cover.className = '';
+            menu.className = '';;
         });
-
     </script>
 </body>
 
